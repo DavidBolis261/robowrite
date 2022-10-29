@@ -1,0 +1,38 @@
+{% extends 'includes/layout.html' %}
+
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1> ❤️ Cute Messages ❤️ ️</h1>
+    <p class="lead">
+    Start generating cute messages. Create endless unique messages, no more writers block.
+    </p>
+
+    <h2>What is your message about?</h2>
+
+    <form class="" action="/tweet-ideas" method="post">
+
+      <div class="mb-3">
+        <label class="form-label">Message Prompt</label>
+        <input type="text" class="form-control" name="tweetIdeas" placeholder="eg. Happy birthday message to my girlfriend">
+        <div class="form-text">Enter topic or subject you would like to generate messages for.</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg"> 💃 GET RECOMMENDATIONS</button>
+
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{prompt}}</h3>
+        <p class="lead">{{openAIAnswer}}</p>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

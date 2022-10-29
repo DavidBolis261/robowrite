@@ -1,0 +1,38 @@
+{% extends 'includes/layout.html' %}
+
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1> Cover Letter</h1>
+    <p class="lead">
+    Create a cover letter in few seconds by entering the job title or any other relevant information.
+    </p>
+
+    <h2>Enter the job title or any relevant information</h2>
+
+    <form class="" action="/business-pitch" method="post">
+
+      <div class="mb-3">
+        <label class="form-label">Title of Business</label>
+        <input type="text" class="form-control" name="businessPitch" placeholder="eg. Software Engineer">
+        <div class="form-text">Describe the job  or title for the AI.</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg">GET RECOMMENDATIONS</button>
+
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{prompt}}</h3>
+        <p class="lead">{{openAIAnswer}}</p>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
